@@ -16,13 +16,14 @@
     "react-dom": "^19.2.6",
     "react-router-dom": "^7.16.0",
     "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "yaml": "^2.9.0"
   },
   "scripts": {
     "start": "set PORT=3000 && react-scripts start",
     "server": "node server.js",
     "dev": "concurrently \"npm start\" \"node server.js\"",
-    "build": "react-scripts build",
+    "build": "CI= react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
