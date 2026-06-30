@@ -4,7 +4,7 @@ import { useAuth } from "../Auth/AuthContext";
 import "./user.css";
 
 const MYSQL_API     = process.env.REACT_APP_API_URL || "https://drivelegal-backend-sdkv.onrender.com/api";
-const STREAMLIT_URL  = process.env.REACT_APP_STREAMLIT_URL || "http://localhost:8501";
+const STREAMLIT_URL  = process.env.REACT_APP_STREAMLIT_URL || "https://prashant-2025-drivelegal-dashboard-backend.hf.space";
 
 // ── Fetch helper ───────────────────────────────────────────────────────────────
 async function mysqlFetch(path, token) {
