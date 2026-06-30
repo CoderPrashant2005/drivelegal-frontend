@@ -9,12 +9,24 @@ const mysql       = require("mysql2/promise");
 
 // ─── MySQL Connection Pool ────────────────────────────────────────────────────
 const pool = mysql.createPool({
-  host:     process.env.DB_HOST     || "localhost",
-  port:     process.env.DB_PORT     || 3307,
-  database: process.env.DB_NAME     || "drive_legal",
-  user:     process.env.DB_USER     || "root",
-  password: process.env.DB_PASSWORD || "",
+  host: process.env.DB_HOST,
+  port: process.env.DB_PORT,
+  database: process.env.DB_NAME,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  connectTimeout: 10000, // fail fast (10s) instead of hanging for 2 minutes
+  ssl: { rejectUnauthorized: false }, // Railway's public proxy requires SSL
 });
+
+// One-time check at startup so connection issues show up immediately in logs
+pool.getConnection()
+  .then(conn => {
+    console.log("✅ MySQL connected");
+    conn.release();
+  })
+  .catch(err => {
+    console.error("❌ MySQL connection failed:", err.message);
+  });
 
 // ─── Gmail SMTP Transporter ───────────────────────────────────────────────────
 const transporter = nodemailer.createTransport({
