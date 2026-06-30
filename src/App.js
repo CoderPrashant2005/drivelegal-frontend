@@ -1,4 +1,4 @@
-﻿import React, { createContext, useContext, useState, useCallback } from "react";
+import React, { createContext, useContext, useState, useCallback } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AuthProvider } from "./Auth/AuthContext";
 import ProtectedRoute from "./Auth/ProtectedRoute";
@@ -49,7 +49,7 @@ export function ThemeToggleBtn({ className = "" }) {
       aria-label="Toggle colour theme"
       title={theme === "light" ? "Switch to Dark Mode" : "Switch to Light Mode"}
     >
-      {theme === "light" ? "🌙 Dark" : "☀️ Light"}
+      {theme === "light" ? "?? Dark" : "?? Light"}
     </button>
   );
 }

@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useAuth } from "../Auth/AuthContext";
 import "./user.css";
 
-const MYSQL_API     = process.env.REACT_APP_API_URL || "http://localhost:5000/api";
+const MYSQL_API     = process.env.REACT_APP_API_URL || "https://drivelegal-backend-sdkv.onrender.com/api";
 const STREAMLIT_URL  = process.env.REACT_APP_STREAMLIT_URL || "http://localhost:8501";
 
 // ── Fetch helper ───────────────────────────────────────────────────────────────

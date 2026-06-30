@@ -131,7 +131,7 @@ export default function AdminLogin() {
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(forgotEmail)) { setError("Enter a valid email address."); return; }
     setLoading(true);
     try {
-      const res = await fetch("http://localhost:5000/api/auth/forgot-password", {
+      const res = await fetch("https://drivelegal-backend-sdkv.onrender.com/api/auth/forgot-password", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email: forgotEmail.trim().toLowerCase() }),

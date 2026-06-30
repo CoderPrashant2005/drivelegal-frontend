@@ -333,7 +333,7 @@ export default function RTOOfficer() {
               <div className="input-with-btn">
                 <input
                   className="rto-input"
-                  placeholder="e.g. http://localhost:5000/detect"
+                  placeholder="e.g. https://drivelegal-backend-sdkv.onrender.com/detect"
                   value={aiApiUrl}
                   onChange={(e) => setAiApiUrl(e.target.value.trim())}
                 />

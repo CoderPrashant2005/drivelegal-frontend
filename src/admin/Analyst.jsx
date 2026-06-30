@@ -8,7 +8,7 @@ import "./admin.css";
 // Must match api.js's API_BASE_URL host (without the /api suffix) so
 // relative evidence_image paths like "/uploads/violations/x.jpg" resolve
 // to the backend, not the frontend's own origin.
-const BACKEND_ORIGIN = "http://localhost:5000";
+const BACKEND_ORIGIN = "https://drivelegal-backend-sdkv.onrender.com";
 
 function resolveImageUrl(path) {
   if (!path) return "";

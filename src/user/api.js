@@ -3,7 +3,7 @@
 // NOTE: confirmed working backend port is 5000 (verified live via browser
 // console test against /api/auth/vehicles/mine). If your backend actually
 // runs on a different port, update this.
-const API_BASE_URL = "http://localhost:5000/api";
+const API_BASE_URL = "https://drivelegal-backend-sdkv.onrender.com/api";
 
 // The backend (middleware/auth.js) authenticates via a Bearer token read
 // from the Authorization header — NOT cookies. The token is stored in

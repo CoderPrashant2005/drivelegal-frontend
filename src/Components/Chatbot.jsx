@@ -3,7 +3,7 @@
 import React, { useState, useRef, useEffect } from "react";
 
 // Point this at your own backend. Backend holds the Groq API key.
-const API_BASE = process.env.REACT_APP_API_URL || "http://localhost:5000/api";
+const API_BASE = process.env.REACT_APP_API_URL || "https://drivelegal-backend-sdkv.onrender.com/api";
 
 export default function Chatbot({ onClose }) {
   const [messages, setMessages] = useState([

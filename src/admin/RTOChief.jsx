@@ -31,7 +31,7 @@ const getPasswordStrength = (pwd) => {
 };
 
 // ── tiny API helper ───────────────────────────────────────────────────────
-const API_BASE = import.meta.env.VITE_API_URL || "http://localhost:5000/api";
+const API_BASE = import.meta.env.VITE_API_URL || "https://drivelegal-backend-sdkv.onrender.com/api";
 
 async function apiFetch(path, options = {}, token) {
   const res = await fetch(`${API_BASE}${path}`, {

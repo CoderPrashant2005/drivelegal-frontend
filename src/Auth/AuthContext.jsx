@@ -6,7 +6,7 @@ import React, { createContext, useContext, useState } from "react";
 
 const AuthContext = createContext();
 
-const API_BASE     = import.meta.env.VITE_API_URL || "http://localhost:5000/api";
+const API_BASE     = import.meta.env.VITE_API_URL || "https://drivelegal-backend-sdkv.onrender.com/api";
 const TOKEN_KEY    = "smartroad_token";
 const REFRESH_KEY  = "smartroad_refresh";
 const SESSION_KEY  = "smartroad_session";
