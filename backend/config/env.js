@@ -1,4 +1,5 @@
 require("dotenv").config();
+console.log('JWT_SECRET loaded:', process.env.JWT_SECRET ? 'YES' : 'NO');
 
 module.exports = {
   port: process.env.PORT || 5000,
