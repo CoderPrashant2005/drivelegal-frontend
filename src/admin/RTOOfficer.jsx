@@ -29,7 +29,7 @@ export default function RTOOfficer() {
   const [streamRef, setStreamRef] = useState(null);
 
   // ── CHANGE 2: AI Model API URL (configurable, defaults to localhost Python model)
-  const [aiApiUrl, setAiApiUrl] = useState("http://localhost:8001/challan/detect");
+  const [aiApiUrl, setAiApiUrl] = useState("https://prashant-2025-drivelegal-ai.hf.space/challan/detect");
   const [showAiConfig, setShowAiConfig] = useState(false);
 
   // Editable detail fields
