@@ -30,13 +30,15 @@ pool.getConnection()
 
 // --- Gmail SMTP Transporter ---
 const transporter = nodemailer.createTransport({
-  service: "gmail",
+  host: "smtp.gmail.com",
+  port: 465,
+  secure: true,
   auth: {
-    user: process.env.SMTP_USER, // e.g. drivelegalinfo@gmail.com
-    pass: process.env.SMTP_PASS, // Gmail App Password (16 chars)
+    user: process.env.SMTP_USER,
+    pass: process.env.SMTP_PASS,
   },
+  family: 4, // force IPv4, avoids ENETUNREACH on hosts without IPv6 egress
 });
-
 // --- POST /api/contact ---
 router.post("/", async (req, res) => {
   const { name, email, subject, message } = req.body;
