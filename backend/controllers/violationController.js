@@ -1,7 +1,7 @@
 const pool = require("../config/db");
 
 // PostgreSQL dashboard config
-const PG_DASHBOARD_URL = "http://localhost:8000/api/v1/violations/trigger";
+const PG_DASHBOARD_URL = "https://prashant-2025-drivelegal-dashboard-backend.hf.space/api/v1/violations/trigger";
 const PG_API_KEY = "DriveLegal_Project";
 
 const UNCLAIMED_OWNER_EMAIL = "unclaimed@system.internal";
